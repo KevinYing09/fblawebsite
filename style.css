@@ -1,13 +1,13 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #bae4f0;
+    background-color: #f5f5f5;
     font-family: sans-serif;
 }
 header{
     margin: 0;
     padding: 0;
-    background-color: #94e1f7;
+    background-color: #14213d;
     height: 100px;
 }
 #logo{
@@ -18,7 +18,7 @@ header{
 }
 h1{
     margin: 5px;
-    color:#004e9b;
+    color:#fca311;
     float: left;
 }
 .navbar{
@@ -34,12 +34,12 @@ h1{
 }
 .navbar button{
     font-size: 16px;
-    background-color: #ff66009e;
+    background-color: #fca311;
     color: #004e9b;
     border: none;
 }
 .navbar button:hover{
-    background-color: #ff6600db;
+    background-color: #fca311;
 }
 main{
     margin: 10px;
@@ -49,25 +49,25 @@ table{
     border-width: 0.1cm;
     border-style: solid;
     border-collapse: collapse;
-    border-color: #004e9b;
-    background-color: #faf9f6;
-    color: #4EA1D3;
+    border-color: #14213d;
+    background-color: #14213d;
+    color: #fca311;
     font-size: 14px;
 }
 th{
     border-width: 0.06cm;
     border-style: solid;
-    border-color: #004e9b;
+    border-color: #475c6c;
 }
 .t{
-    color: #ff6500;
+    color: #ececec;
 }
 h2, h3{
-    color:#004e9b;
+    color:#14213d;
 }
 footer{
     margin: 0;
-    background-color: #94e1f7;
+    background-color: #14213d;
     display:block;
     position:absolute;
     left:0;
@@ -81,5 +81,5 @@ footer{
     margin: 0;;
 }
 .f{
-    color: #004e9b;
+    color: #fca311;
 }
