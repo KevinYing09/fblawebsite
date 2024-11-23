@@ -1,74 +1,172 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Skyline High School Gymnasium</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <br>
-            <div class="container">
-                <img id="logo" src="images/logo.png"
-                height="50">
-                <h1>Skyline High School Gymnasium</h1>
-                <nav align = "right" class="navbar">
-                    <a href = "index.html">    
-                        <button>Home</button>
-                    </a>
-                    <a href = "information.html">    
-                    <button>Information</button>
-                    </a>
-                    <a href = "tickets.html">    
-                    <button>Tickets</button>
-                    </a>
-                    <a href = "rent.html">    
-                        <button>Rentals</button>
-                    </a>
-                </nav>
-            </div>
-        <br>
-        </header>
-        <main>
-            <div class = "concert">
-                <h1 id="support">Come Support Your Team!</h1>
-            </div>
-            <h2>Buy Tickets</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" placeholder="John Lewis" name="name" required><br><br>
-                <label for="email">Email:</label>
-                <input type="text" id="email" placeholder="tickets@email.com" name="email" required><br><br>
-                <label for="phone">Phone:</label>
-                <input type="text" id="phone" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" required><br><br>
-                <label for="event">Event:</label>
-                <select id="event" name="event" required>
-                    <option value="basketball">Basketball Game</option>
-                    <option value="concert">Concert</option>
-                    <option value="play">Play</option>
-                </select><br><br>
-                <label for="date">Date:</label>
-                <input type="date" id="date" required><br><br>
-                <label for="quantity">Quantity:</label>
-                <input type="number" id="quantity" placeholder="0" min="1" name="quantity" required><br><br>
-                <label for="payment">Payment:</label>
-                <select id="payment" name="payment" required>
-                    <option value="visa">Visa</option>
-                    <option value="mastercard">Mastercard</option>
-                    <option value="applepay">Apple Pay</option>
-                </select><br><br>
-                <input type="submit" value="Submit">
-            </form>
-            <br>
-        </main>
-        <footer>
-            <br>
-            <p class="f">3251 E 3760 S, Salt Lake City, UT 84109</p>
-            <p class="f">385-646-5420</p>
-            <p class="f" id="f1">bkanderson@graniteschools.org</p>
-            <br>
-        </footer>
-    </body>
-</html>
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    font-family: sans-serif;
+}
+header{
+    margin: 0;
+    padding: 0;
+    background-color: #14213d;
+    height: 100px;
+}
+#logo{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0;
+    float: left;
+}
+h1{
+    margin: 5px;
+    color:#fca311;
+    float: left;
+}
+.navbar{
+    margin-right: 20px;
+    padding: 10px;
+    float: right;
+}
+.navbar a{
+    text-decoration: none;
+    color: #004e9b;
+    text-align: center;
+    padding: 3px;
+}
+.navbar button{
+    font-size: 16px;
+    background-color: #fca311;
+    color: #004e9b;
+    border: none;
+}
+.navbar button:hover{
+    background-color: #fca21191;
+    cursor: pointer;
+}
+main{
+    margin: 0;
+    padding: 0;
+}
+.gym{
+    width: 100%;
+    height: 700px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("images/gym.png");
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#scroll{
+    font-size: 50px;
+    background-color: #14213d;
+    padding: 30px;
+}
+#UE{
+    margin: 30px;
+}
+table{
+    border-width: 0.1cm;
+    border-style: solid;
+    border-collapse: collapse;
+    border-color: #14213d;
+    background-color: #14213d;
+    color: #fca311;
+    font-size: 14px;
+}
+th{
+    border-width: 0.06cm;
+    border-style: solid;
+    border-color: #475c6c;
+}
+.t{
+    color: #ececec;
+}
+h2, h3{
+    margin-left: 30px;
+    color: #14213d;
+}
+footer{
+    margin: 0;
+    background-color: #14213d;
+    display:block;
+    left:0;
+    right:0;
+    bottom:0;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 24px;
+}
+#f1{
+    margin: 0;;
+}
+.f{
+    color: #fca311;
+}
+
+/* Styling the Information Page */
+#fp{
+    margin-left: 40px;
+    float: center;
+}
+ul{
+    list-style-type: none;
+    margin-left: 40px;
+    margin-top: -10px;
+    padding: 0;
+    overflow: hidden;
+    color: #14213d;
+}
+li{
+    padding: 5px;
+}
+
+/* Styling Forms */
+form{
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 10px;
+    color: #14213d;
+}
+input[type=text], input[type=number], input[type=time], input[type=date] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #14213d;
+    border-radius: 4px;
+}
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 2px solid #14213d;
+    border-radius: 4px;
+}
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #14213d;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+.ball{
+    width: 100%;
+    height: 400px;
+    background-position: right;
+    background-size: cover;
+    background-image: url("images/hoop.png");
+    background-attachment: fixed;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+#support{
+    font-size: 50px;
+    background-color: #14213d;
+    padding: 30px;
+    margin: 100px;
+}
