@@ -66,6 +66,7 @@ main{
     margin: 40px;
 }
 table{
+    margin: 40px;
     border-width: 0.1cm;
     border-style: solid;
     border-collapse: collapse;
@@ -75,6 +76,7 @@ table{
     font-size: 14px;
 }
 th{
+    padding: 10px;
     border-width: 0.06cm;
     border-style: solid;
     border-color: #475c6c;
@@ -183,8 +185,8 @@ input[type=button], input[type=submit], input[type=reset] {
 
 @media (max-width: 600px){
     header{
-        font-size: 14px;
-        height: 130px;
+        font-size: 11px;
+        height: 160px;
     }
 
     h1{
@@ -194,13 +196,18 @@ input[type=button], input[type=submit], input[type=reset] {
     }
 
     .navbar{
-        margin-right: 20px;
+        margin-left: 30px;
         padding: 10px;
-        float: none;
+        float: left;
     }
+  	
+  	.navbar button{
+      	font-size: 12px;
+  	}
 
     table{
-        margin: 20px;
+        margin: 0px;
+        width: 100%;
     }
 
     #fp{
