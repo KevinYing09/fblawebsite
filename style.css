@@ -63,7 +63,7 @@ main{
     padding: 30px;
 }
 #UE{
-    margin: 30px;
+    margin: 40px;
 }
 table{
     border-width: 0.1cm;
@@ -106,8 +106,7 @@ footer{
 
 /* Styling the Information Page */
 #fp{
-    margin-left: 40px;
-    float: center;
+    margin-left: 75px;
 }
 ul{
     list-style-type: none;
@@ -180,4 +179,31 @@ input[type=button], input[type=submit], input[type=reset] {
     background-color: #14213d;
     padding: 30px;
     margin: 100px;
+}
+
+@media (max-width: 600px){
+    header{
+        font-size: 14px;
+        height: 130px;
+    }
+
+    h1{
+        margin-left: 30px;
+        color:#fca311;
+        float: left;
+    }
+
+    .navbar{
+        margin-right: 20px;
+        padding: 10px;
+        float: none;
+    }
+
+    table{
+        margin: 20px;
+    }
+
+    #fp{
+        margin-left: 25px;
+    }
 }
