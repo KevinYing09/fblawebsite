@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Skyline High School Gymnasium</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
         <header>
@@ -36,63 +39,38 @@
                 <h1 id="scroll">3,500 Seats <br> Live Events <br> Sports</h1>
             </div>
             <h2>Upcoming Events</h2>
-            <h3 align="center">December 2024</h3>
-            <table align="center", border="2">
-                <tr align="center">
-                    <th width="5%">Sunday</th>
-                    <th width="5%">Monday</th>
-                    <th width="5%">Tuesday</th>
-                    <th width="5%">Wednesday</th>
-                    <th width="5%">Thursday</th>
-                    <th width="5%">Friday</th>
-                    <th width="5%">Saturday</th>
-                </tr>
-                <tr align="center", height = "70", valign="top">
-                    <th width="5%">1</th>
-                    <th width="5%">2<br><p class="t" style="font-size: 12px;">Girl's Volleyball Game</p><p class="t" style="font-size: 12px;">8:00 PM</p></th>
-                    <th width="5%">3<br><p class="t" style="font-size: 12px;">Boy's Basketball Game</p><p class="t" style="font-size: 12px;">7:00 PM</p></th>
-                    <th width="5%">4</th>
-                    <th width="5%">5<br><p class="t" style="font-size: 12px;">Girl's Basketball Game</p><p class="t" style="font-size: 12px;">6:00 PM</p></th>
-                    <th width="5%">6</th>
-                    <th width="5%">7<br><p class="t" style="font-size: 12px;">Post Malone Concert</p><p class="t" style="font-size: 12px;">8:00 PM</p></th>
-                </tr>
-                <tr align="center", height = "70", valign="top">
-                    <th width="5%">8</th>
-                    <th width="5%">9<br><p class="t" style="font-size: 12px;">Boy's Volleyball Game</p><p class="t" style="font-size: 12px;">6:30 PM</p></th>
-                    <th width="5%">10</th>
-                    <th width="5%">11<br><p class="t" style="font-size: 12px;">Girl's Basketball Game</p><p class="t" style="font-size: 12px;">7:30 PM</p></th>
-                    <th width="5%">12</th>
-                    <th width="5%">13</th>
-                    <th width="5%">14<br><p class="t" style="font-size: 12px;">Winters Dance</p><p class="t" style="font-size: 12px;">8:00 PM</p></th>
-                </tr>
-                <tr align="center", height = "70", valign="top">
-                    <th width="5%">15</th>
-                    <th width="5%">16</th>
-                    <th width="5%">17<br><p class="t" style="font-size: 12px;">Girl's Volleyball Game</p><p class="t" style="font-size: 12px;">7:00 PM</p></th>
-                    <th width="5%">18</th>
-                    <th width="5%">19</th>
-                    <th width="5%">20<br><p class="t" style="font-size: 12px;">Boy's Basketball Game</p><p class="t" style="font-size: 12px;">5:30 PM</p></th>
-                    <th width="5%">21<br><p class="t" style="font-size: 12px;">Wrestling Meet</p><p class="t" style="font-size: 12px;">8:00 AM</th>
-                </tr>
-                <tr align="center", height = "70", valign="top">
-                    <th width="5%">22</th>
-                    <th width="5%">23</th>
-                    <th width="5%">24</th>
-                    <th width="5%">25<br><p class="t" style="font-size: 12px;">Christmas Musical</p><p class="t" style="font-size: 12px;">4:00 PM</th>
-                    <th width="5%">26</th>
-                    <th width="5%">27</th>
-                    <th width="5%">28</th>
-                </tr>
-                <tr align="center", height = "70", valign="top">
-                    <th width="5%">29</th>
-                    <th width="5%">30<br><p class="t" style="font-size: 12px;">Boy's Volleyball Game</p><p class="t" style="font-size: 12px;">6:00 PM</p></th>
-                    <th width="5%">31</th>
-                    <th width="5%"></th>
-                    <th width="5%"></th>
-                    <th width="5%"></th>
-                    <th width="5%"></th>
-                </tr>
-            </table>
+            
+            <div class="container-cal">
+                <div class="left">
+                    <div class="calendar">
+                        <div class="month">
+                            <i class="fa fa-angle-left prev"></i>
+                            <div class="date"></div>
+                            <i class="fa fa-angle-right next"></i>
+                        </div>
+                        <div class="weekdays">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+                        <div class="days">
+                            <! Days are inserted here by JS -->
+                        </div>
+                        <div class="goto-today">
+                            <div class="goto">
+                                <input type="text" placeholder ="mm/yyyy" class="date-input">
+                                <button class="goto-btn">Go</button>
+                            </div>
+                            <button class="today-btn">Today</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <br>
         </main>
         <footer>
@@ -102,5 +80,6 @@
             <p class="f" id="f1">bkanderson@graniteschools.org</p>
             <br>
         </footer>
+        <script src="script.js"></script>
     </body>
 </html>
