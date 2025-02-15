@@ -1,11 +1,14 @@
 const calendar = document.querySelector('.calendar'),
-date = document.querySelector('.date'),
-daysContainer = document.querySelector('.days'),
-prev = document.querySelector('.prev');
-next = document.querySelector('.next');
-todayBtn = document.querySelector('.today-btn');
-gotoBtn = document.querySelector('.goto-btn');
-dateInput = document.querySelector('.date-input');
+    date = document.querySelector('.date'),
+    daysContainer = document.querySelector('.days'),
+    prev = document.querySelector('.prev');
+    next = document.querySelector('.next');
+    todayBtn = document.querySelector('.today-btn');
+    gotoBtn = document.querySelector('.goto-btn');
+    dateInput = document.querySelector('.date-input'),
+    eventDay = document.querySelector('.event-day'),
+    eventDate = document.querySelector('.event-date');
+    eventsContainer = document.querySelector('.events');
 
 
 let today = new Date();
@@ -28,7 +31,38 @@ const months = [
     'December'
 ];
 
-
+const eventsArr = [
+    {
+        day: 14,
+        month: 2,
+        year: 2025,
+        events: [
+            {
+                title: "Event 1",
+                time: "10:00 AM",
+            },
+            {
+                title: "Event 2",
+                time: "11:00 AM",
+            },
+        ],
+    },
+    {
+        day: 16,
+        month: 2,
+        year: 2025,
+        events: [
+            {
+                title: "Event 1",
+                time: "10:00 AM",
+            },
+            {
+                title: "Event 2",
+                time: "11:00 AM",
+            },
+        ],
+    },
+]; 
 //function to add days
 
 function initCalendar() {
@@ -53,14 +87,40 @@ function initCalendar() {
 
     //current month
     for(let i = 1; i <= lastDate; i++) {
+        //check if there is an event on that day
+        let event = false;
+        eventsArr.forEach((eventObj) => {
+            if(
+                eventObj.day === i &&
+                eventObj.month === month + 1 &&
+                eventObj.year === year
+            )
+            {
+                //if there is an event on that day
+                event = true;
+            }
+        })
         if(i === new Date().getDate() && 
         year === new Date().getFullYear() && 
-        month === new Date().getMonth()) {
-            days += `<div class = 'day today'>${i}</div>`;
+        month === new Date().getMonth()
+        ){
+            activeDay = i;
+            getActiveDay(i);
+            updateEvents(i);
+
+            if(event) {
+                days += `<div class = 'day today active event'>${i}</div>`;
+            } else {
+                days += `<div class = 'day today active'>${i}</div>`;
+            }
         }
         // add remaining days
         else {
-            days += `<div class = 'day'>${i}</div>`;
+            if(event) {
+                days += `<div class = 'day event'>${i}</div>`;
+            } else {
+                days += `<div class = 'day'>${i}</div>`;
+            }
         }
     }
 
@@ -69,6 +129,7 @@ function initCalendar() {
         days += `<div class = 'day next-date'>${j}</div>`;
     }
     daysContainer.innerHTML = days;
+    addListener();
 }
 
 initCalendar();
@@ -133,4 +194,85 @@ function gotoDate() {
         }
     }
     alert('Invalid Date');
+}
+
+function addListener(){
+    const days = document.querySelectorAll('.day');
+    days.forEach((day) => {
+        day.addEventListener('click', (e) => {
+            activeDay = Number(e.target.innerHTML);
+            getActiveDay(e.target.innerHTML);
+            updateEvents(Number(e.target.innerHTML));
+
+            days.forEach(day => {
+                day.classList.remove('active');
+            })
+            if(e.target.classList.contains('prev-date')) {
+                prevMonth();
+                setTimeout(() => {
+                    const days = document.querySelectorAll('.day');
+                    days.forEach((day) => {
+                        if(!day.classList.contains("prev-date") && day.innerHTML === e.target.innerHTML) {
+                            day.classList.add('active');
+                        }
+                    });
+                }, 100);
+            }
+            else if(e.target.classList.contains('next-date')) {
+                nextMonth();
+                setTimeout(() => {
+                    const days = document.querySelectorAll('.day');
+                    days.forEach((day) => {
+                        if(!day.classList.contains("next-date") && day.innerHTML === e.target.innerHTML) {
+                            day.classList.add('active');
+                        }
+                    });
+                }, 100);
+            }
+            else {
+                e.target.classList.add('active');
+            }
+        });
+    });
+}
+
+function getActiveDay(date){
+    const day = new Date(year, month, date);
+    const dayName = day.toString().split(" ")[0];
+    eventDay.innerHTML = dayName;
+    eventDate.innerHTML = date + ' ' + months[month] + ' ' + year;
+}
+
+//function to show events
+function updateEvents(date){
+    let events = '';
+    eventsArr.forEach((event) => {
+        //events of active day only
+        if (
+            date === event.day &&
+            month + 1 === event.month &&
+            year === event.year
+        ){
+            event.events.forEach((event) => {
+                events += 
+                `<div class = 'event'>
+                    <div class = 'title'>
+                        <i class = 'fas fa-circle'></i>
+                        <h3 class = 'event-title'>${event.title}</h3>
+                    </div>
+                    <div class = 'event-time'>
+                    <span class = 'event-time'>${event.time}</span>
+                    </div>
+                </div>
+                `;
+            });
+        }
+    });
+    if((events === '')){
+        events = `<div class = 'no-event'>
+            <h3 class = 'event-none'>No Events</h3>
+        </div>`;
+    }
+    console.log(events);
+    eventsContainer.innerHTML = events;
 }
