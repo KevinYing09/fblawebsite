@@ -182,7 +182,7 @@ main{
     background-color: var(--primary-clr);
 }
 .calendar .days .active:hover{
-    color: red
+    color: #fff
 }
 .calendar .days .prev-date,
 .calendar .days .next-date{
@@ -191,7 +191,7 @@ main{
 
 .calendar .days .active{
     position: relative;
-    color: red;
+    color: var(--primary-clr);
 }
 .calendar .days .active::before {
     content: "";
@@ -258,6 +258,90 @@ main{
 }
 .calendar .goto-today button:hover{
     background-color: var(--primary-clr);
+    color: #fff;
+}
+.container-cal .right{
+    position: relative;
+    width: 40%;
+    min-height: 100%;
+    padding: 20px 0;
+}
+.right .today-date{
+    font-size: 2rem;
+    width: 78%;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    padding-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+.events{
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+}
+.events .event {
+    position: relative;
+    width: 95%;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 20px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(90deg, #1e2d4f, transparent);
+}
+.events .event:nth-child(even){
+    background: transparent;
+}
+.events .event:hover{
+    background: linear-gradient(90deg, #fca311, transparent);
+}
+.events .event .title{
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+.events .event .title .event-title {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 20px;
+    color: #fff;
+}
+.events .event .title i {
+   color: #fca311;
+   font-size: 0.5rem;
+}
+.events .event:hover .title i {
+    color: #fff;
+ }
+.events .event .event-time {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-left: 15px;
+    color: #878895;
+    pointer-events: none;
+}
+
+.events .no-event .event-none {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 20px;
     color: #fff;
 }
 
