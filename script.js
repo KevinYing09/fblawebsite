@@ -33,32 +33,216 @@ const months = [
 
 const eventsArr = [
     {
+        day: 5,
+        month: 2,
+        year: 2025,
+        events: [
+            {
+                title: "Girls Basketball Game",
+                time: "8:00 PM - 10:00 PM",
+            },
+        ],
+    },
+    {
+        day: 10,
+        month: 2,
+        year: 2025,
+        events: [
+            {
+                title: "Boys Volleyball Game",
+                time: "8:00 PM - 10:00 PM",
+            },
+        ],
+    },
+    {
         day: 14,
         month: 2,
         year: 2025,
         events: [
             {
-                title: "Event 1",
-                time: "10:00 AM",
-            },
-            {
-                title: "Event 2",
-                time: "11:00 AM",
+                title: "Boys Basketball Game",
+                time: "6:00 PM - 8:00 PM",
             },
         ],
     },
     {
-        day: 16,
+        day: 18,
         month: 2,
         year: 2025,
         events: [
             {
-                title: "Event 1",
-                time: "10:00 AM",
+                title: "Girls Volleyball Game",
+                time: "7:00 PM - 9:00 PM",
+            },
+        ],
+    },
+    {
+        day: 22,
+        month: 2,
+        year: 2025,
+        events: [
+            {
+                title: "Skyline Dance Company Performance",
+                time: "10:00 AM - 1:00 PM",
             },
             {
-                title: "Event 2",
-                time: "11:00 AM",
+                title: "Skyline Choir Performance",
+                time: "2:00 PM - 3:00 PM",
+            },
+            {
+                title: "Post Malone Concert",
+                time: "7:00 PM - 10:00 PM",
+            },
+        ],
+    },
+    {
+        day: 26,
+        month: 2,
+        year: 2025,
+        events: [
+            {
+                title: "Boys Basketball Game",
+                time: "6:00 PM - 8:00 PM",
+            },
+        ],
+    },
+    {
+        day: 5,
+        month: 3,
+        year: 2025,
+        events: [
+            {
+                title: "Skyline Concert Band Performance",
+                time: "6:00 PM - 7:00 PM",
+            },
+            {
+                title: "Girls Basketball Game",
+                time: "8:00 PM - 10:00 PM",
+            },
+        ],
+    },
+    {
+        day: 11,
+        month: 3,
+        year: 2025,
+        events: [
+            {
+                title: "Skyline Spring Play",
+                time: "4:00 PM - 7:00 PM",
+            },
+        ],
+    },
+    {
+        day: 13,
+        month: 3,
+        year: 2025,
+        events: [
+            {
+                title: "Boys Basketball Game",
+                time: "6:30 PM - 8:30 PM",
+            },
+        ],
+    },
+    {
+        day: 17,
+        month: 3,
+        year: 2025,
+        events: [
+            {
+                title: "Boys Volleyball Game",
+                time: "7:30 PM - 9:30 PM",
+            },
+        ],
+    },
+    {
+        day: 27,
+        month: 3,
+        year: 2025,
+        events: [
+            {
+                title: "Girls Volleyball Game",
+                time: "5:30 PM - 7:30 PM",
+            },
+        ],
+    },
+    {
+        day: 29,
+        month: 3,
+        year: 2025,
+        events: [
+            {
+                title: "State Wrestling Tournament",
+                time: "7:30 AM - 3:30 PM",
+            },
+            {
+                title: "Skyline Talent Show",
+                time: "5:30 PM - 8:30 PM",
+            },
+        ],
+    },
+    {
+        day: 1,
+        month: 4,
+        year: 2025,
+        events: [
+            {
+                title: "Open Weight Room",
+                time: "3:30 PM - 6:00 PM",
+            },
+        ],
+    },
+    {
+        day: 9,
+        month: 4,
+        year: 2025,
+        events: [
+            {
+                title: "Girls Volleyball Playoffs",
+                time: "5:00 PM - 7:00 PM",
+            },
+        ],
+    },
+    {
+        day: 14,
+        month: 4,
+        year: 2025,
+        events: [
+            {
+                title: "Boys Basketball Game",
+                time: "7:00 PM - 9:00 PM",
+            },
+        ],
+    },
+    {
+        day: 18,
+        month: 4,
+        year: 2025,
+        events: [
+            {
+                title: "Boys Volleyball Finals",
+                time: "4:00 PM - 7:00 PM",
+            },
+        ],
+    },
+    {
+        day: 23,
+        month: 4,
+        year: 2025,
+        events: [
+            {
+                title: "Skyline Concert Orchestra Performance",
+                time: "5:00 PM - 8:00 PM",
+            },
+        ],
+    },
+    {
+        day: 26,
+        month: 4,
+        year: 2025,
+        events: [
+            {
+                title: "Prom",
+                time: "8:00 PM - 10:00 PM",
             },
         ],
     },
