@@ -33,7 +33,19 @@
         </header>
         <main>
             <h2>Seating Chart</h2>
-            <img src="images/floorplan.png" alt="Seating Chart" width="90%" id="fp" align="center">
+            <div class="chart">
+                <div class="fp">
+                    <img src="images/floorplan.png" alt="Seating Chart" id="fp-image" usemap="#image-map">
+                    <map name="image-map">
+                        <area id="open" alt="openSeating" coords="908,90,907,427,97,424,274,375,274,138,94,87" shape="poly" onclick="openChart()">
+                        <area id="student" alt="studentSection" coords="94,91,269,140,271,377,92,424" shape="poly" onclick="openStud()">
+                    </map>
+                </div>
+                <div class="fpText">
+                    <p id="fpT">*Hover Over Chart</p>
+                    <div class="background"></div>
+                </div>
+            </div>
             <h2>Policies</h2>
             <ul>
                 <li>Clean up all trash</li>
@@ -55,5 +67,19 @@
             <p class="f" id="f1">bkanderson@graniteschools.org</p>
             <br>
         </footer>
+        <script>
+            function openChart(){
+            console.log("openChart called");
+            openText = document.getElementById("fpT");
+            txt = "Seats Available to Anyone";
+            openText.innerHTML = txt;
+            }
+            function openStud(){
+            console.log("openChart called");
+            openText = document.getElementById("fpT");
+            txt = "Seats for Students";
+            openText.innerHTML = txt;
+            }
+        </script>
     </body>
 </html>
