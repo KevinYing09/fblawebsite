@@ -32,19 +32,19 @@
         <br>
         </header>
         <main>
-            <h2>Seating Chart</h2>
             <div class="chart">
                 <div class="fp">
+                    <h2 id="fpTitle">Seating Chart</h2>
                     <img src="images/floorplan.png" alt="Seating Chart" id="fp-image" usemap="#image-map">
-                    <map name="image-map">
-                        <area id="open" alt="openSeating" coords="908,90,907,427,97,424,274,375,274,138,94,87" shape="poly" onclick="openChart()">
-                        <area id="student" alt="studentSection" coords="94,91,269,140,271,377,92,424" shape="poly" onclick="openStud()">
-                    </map>
+                        <map name="image-map">
+                            <area id="open1" alt="openSeating" coords="145,37,323,187,778,186,957,137" shape="poly" onmouseover="openChart()">
+                            <area id="open2" alt="openSeating2" coords="147,475,323,418,778,427,952,476" shape="poly" onmouseover="openChart()">
+                            <area id="open3" alt="openSeating3" coords="781,191,961,142,957,472,781,423" shape="poly" onmouseover="openChart()">
+                            <area id="student" alt="studentSection" coords="143,139,321,191,311,424,149,477" shape="poly" onmouseover="openStud()">
+                        </map>
+                    <p id="fpText">*Hover Over Chart</p>
                 </div>
-                <div class="fpText">
-                    <p id="fpT">*Hover Over Chart</p>
-                    <div class="background"></div>
-                </div>
+                <div id="icon1"></div>
             </div>
             <h2>Policies</h2>
             <ul>
@@ -69,15 +69,17 @@
         </footer>
         <script>
             function openChart(){
-            console.log("openChart called");
-            openText = document.getElementById("fpT");
-            txt = "Seats Available to Anyone";
+            openText = document.getElementById("fpText");
+            document.getElementById("icon1").style.backgroundColor = "#dfbb85";
+
+            txt = "*Seats for Anyone";
             openText.innerHTML = txt;
             }
             function openStud(){
-            console.log("openChart called");
-            openText = document.getElementById("fpT");
-            txt = "Seats for Students";
+            openText = document.getElementById("fpText");
+            document.getElementById("icon1").style.backgroundColor = "#14213d";
+            txt = "*Seats for Students";
+
             openText.innerHTML = txt;
             }
         </script>
