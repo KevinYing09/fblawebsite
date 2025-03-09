@@ -41,6 +41,7 @@
                             <area id="open2" alt="openSeating2" coords="147,475,323,418,778,427,952,476" shape="poly" onmouseover="openChart()">
                             <area id="open3" alt="openSeating3" coords="781,191,961,142,957,472,781,423" shape="poly" onmouseover="openChart()">
                             <area id="student" alt="studentSection" coords="143,139,321,191,311,424,149,477" shape="poly" onmouseover="openStud()">
+                            <area id="court" alt="Court" coords="323,187,778,186,781,423,311,424" shape="poly" onmouseover="court()">
                         </map>
                     <p id="fpText">*Hover Over Chart</p>
                 </div>
@@ -79,6 +80,13 @@
             openText = document.getElementById("fpText");
             document.getElementById("icon1").style.backgroundColor = "#14213d";
             txt = "*Seats for Students";
+
+            openText.innerHTML = txt;
+            }
+            function court(){
+            openText = document.getElementById("fpText");
+            document.getElementById("icon1").style.backgroundColor = "#fca311";
+            txt = "*Basketball Court";
 
             openText.innerHTML = txt;
             }
