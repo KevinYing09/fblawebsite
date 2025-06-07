@@ -34,51 +34,172 @@ const months = [
 const eventsArr = [
     {
         day: 5,
-        month: 2,
+        month: 5,
         year: 2025,
         events: [
             {
-                title: "Girls Basketball Game",
+                title: "AP Testing",
+                time: "8:00 AM - 4:00 PM",
+            },
+        ],
+    },
+    {
+        day: 6,
+        month: 5,
+        year: 2025,
+        events: [
+            {
+                title: "AP Testing",
+                time: "8:00 AM - 4:00 PM",
+            },
+        ],
+    },
+    {
+        day: 7,
+        month: 5,
+        year: 2025,
+        events: [
+            {
+                title: "AP Testing",
+                time: "8:00 AM - 4:00 PM",
+            },
+        ],
+    },
+    {
+        day: 8,
+        month: 5,
+        year: 2025,
+        events: [
+            {
+                title: "AP Testing",
+                time: "8:00 AM - 4:00 PM",
+            },
+        ],
+    },
+    {
+        day: 9,
+        month: 5,
+        year: 2025,
+        events: [
+            {
+                title: "AP Testing",
+                time: "8:00 AM - 4:00 PM",
+            },
+        ],
+    },
+    {
+        day: 12,
+        month: 5,
+        year: 2025,
+        events: [
+            {
+                title: "AP Testing",
+                time: "8:00 AM - 4:00 PM",
+            },
+        ],
+    },
+    {
+        day: 13,
+        month: 5,
+        year: 2025,
+        events: [
+            {
+                title: "AP Testing",
+                time: "8:00 AM - 4:00 PM",
+            },
+        ],
+    },
+    {
+        day: 14,
+        month: 5,
+        year: 2025,
+        events: [
+            {
+                title: "AP Testing",
+                time: "8:00 AM - 4:00 PM",
+            },
+        ],
+    },
+    {
+        day: 15,
+        month: 5,
+        year: 2025,
+        events: [
+            {
+                title: "AP Testing",
+                time: "8:00 AM - 4:00 PM",
+            },
+        ],
+    },
+    {
+        day: 16,
+        month: 5,
+        year: 2025,
+        events: [
+            {
+                title: "AP Testing",
+                time: "8:00 AM - 4:00 PM",
+            },
+        ],
+    },
+    {
+        day: 27,
+        month: 5,
+        year: 2025,
+        events: [
+            {
+                title: "Yearbook Stomp",
+                time: "7:00 PM - 9:00 PM",
+            },
+        ],
+    },
+    {
+        day: 5,
+        month: 6,
+        year: 2025,
+        events: [
+            {
+                title: "Grent Perez Concert",
                 time: "8:00 PM - 10:00 PM",
             },
         ],
     },
     {
         day: 10,
-        month: 2,
+        month: 6,
         year: 2025,
         events: [
             {
-                title: "Boys Volleyball Game",
+                title: "Junior NBA Games",
                 time: "8:00 PM - 10:00 PM",
             },
         ],
     },
     {
         day: 14,
-        month: 2,
+        month: 6,
         year: 2025,
         events: [
             {
-                title: "Boys Basketball Game",
+                title: "Junior NBA Games",
                 time: "6:00 PM - 8:00 PM",
             },
         ],
     },
     {
         day: 18,
-        month: 2,
+        month: 6,
         year: 2025,
         events: [
             {
-                title: "Girls Volleyball Game",
+                title: "Open Gym Usage",
                 time: "7:00 PM - 9:00 PM",
             },
         ],
     },
     {
         day: 22,
-        month: 2,
+        month: 6,
         year: 2025,
         events: [
             {
@@ -97,18 +218,18 @@ const eventsArr = [
     },
     {
         day: 26,
-        month: 2,
+        month: 6,
         year: 2025,
         events: [
             {
-                title: "Boys Basketball Game",
-                time: "6:00 PM - 8:00 PM",
+                title: "U12 Volleyball Tournament",
+                time: "6:00 PM - 10:00 PM",
             },
         ],
     },
     {
         day: 5,
-        month: 3,
+        month: 7,
         year: 2025,
         events: [
             {
@@ -116,58 +237,58 @@ const eventsArr = [
                 time: "6:00 PM - 7:00 PM",
             },
             {
-                title: "Girls Basketball Game",
+                title: "U12 Volleyball Finals",
                 time: "8:00 PM - 10:00 PM",
             },
         ],
     },
     {
         day: 11,
-        month: 3,
+        month: 7,
         year: 2025,
         events: [
             {
-                title: "Skyline Spring Play",
+                title: "Open Mic Night",
                 time: "4:00 PM - 7:00 PM",
             },
         ],
     },
     {
         day: 13,
-        month: 3,
+        month: 7,
         year: 2025,
         events: [
             {
-                title: "Boys Basketball Game",
+                title: "Junior NBA Playoffs",
                 time: "6:30 PM - 8:30 PM",
             },
         ],
     },
     {
         day: 17,
-        month: 3,
+        month: 7,
         year: 2025,
         events: [
             {
-                title: "Boys Volleyball Game",
+                title: "Junior NBA Playoffs",
                 time: "7:30 PM - 9:30 PM",
             },
         ],
     },
     {
         day: 27,
-        month: 3,
+        month: 7,
         year: 2025,
         events: [
             {
-                title: "Girls Volleyball Game",
+                title: "Junior NBA Finals",
                 time: "5:30 PM - 7:30 PM",
             },
         ],
     },
     {
         day: 29,
-        month: 3,
+        month: 7,
         year: 2025,
         events: [
             {
@@ -175,14 +296,14 @@ const eventsArr = [
                 time: "7:30 AM - 3:30 PM",
             },
             {
-                title: "Skyline Talent Show",
+                title: "Talent Show",
                 time: "5:30 PM - 8:30 PM",
             },
         ],
     },
     {
         day: 1,
-        month: 4,
+        month: 8,
         year: 2025,
         events: [
             {
@@ -193,40 +314,40 @@ const eventsArr = [
     },
     {
         day: 9,
-        month: 4,
+        month: 8,
         year: 2025,
         events: [
             {
-                title: "Girls Volleyball Playoffs",
-                time: "5:00 PM - 7:00 PM",
+                title: "Laufey Concert",
+                time: "7:00 PM - 10:00 PM",
             },
         ],
     },
     {
         day: 14,
-        month: 4,
+        month: 8,
         year: 2025,
         events: [
             {
-                title: "Boys Basketball Game",
-                time: "7:00 PM - 9:00 PM",
+                title: "Wrestling Camp",
+                time: "10:00 AM - 4:00 PM",
             },
         ],
     },
     {
         day: 18,
-        month: 4,
+        month: 8,
         year: 2025,
         events: [
             {
-                title: "Boys Volleyball Finals",
+                title: "Skyline Choir Performance",
                 time: "4:00 PM - 7:00 PM",
             },
         ],
     },
     {
         day: 23,
-        month: 4,
+        month: 8,
         year: 2025,
         events: [
             {
@@ -236,12 +357,12 @@ const eventsArr = [
         ],
     },
     {
-        day: 26,
-        month: 4,
+        day: 30,
+        month: 8,
         year: 2025,
         events: [
             {
-                title: "Prom",
+                title: "Homecoming",
                 time: "8:00 PM - 10:00 PM",
             },
         ],
