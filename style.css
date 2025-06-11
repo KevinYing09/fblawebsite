@@ -468,7 +468,7 @@ input[type=button], input[type=submit], input[type=reset] {
 }
 
 .olcards li .content {
-  background-color: var(--cardColor);
+  background: linear-gradient(to right, var(--cardColor), var(--cardChange) 75%, transparent 150%);
   --inlinePadding: 1em;
   --boxPadding: 0.5em;
   display: grid;
@@ -520,6 +520,8 @@ input[type=button], input[type=submit], input[type=reset] {
 }
 .olcards li .content .text {
   grid-area: text;
+  color: var(--textColor);
+  color: white;
 }
 .ball{
     width: 100%;
