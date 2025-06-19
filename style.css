@@ -669,7 +669,7 @@ input[type=button], input[type=submit], input[type=reset] {
 }
 .blur{
     width: 125%;
-    height: 100px;
+    height: 0px;
 
     position: sticky;
     /* background-color: transparent; */
