@@ -90,6 +90,7 @@ main{
     color:#fff;
     border-radius: 10px;
     background-color: #14213d; 
+    box-shadow: 0 0 10px rgba(0, 0, 0);
 }
 
 .left{
@@ -521,6 +522,22 @@ input[type=button], input[type=submit], input[type=reset] {
   left: 0;
   top: 100%;
 }
+.olcards li:hover {
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+    transition: filter 0.3s ease-in-out;
+}
+.olcards li .content:hover {
+    clip-path: polygon(
+    0 0,
+    calc(100% - var(--arrowClipSize)) 0,
+    100% 50%,
+    calc(100% - var(--arrowClipSize)) 100%,
+    calc(100% - var(--arrowClipSize)) calc(100% + var(--cardsGap)),
+    0 calc(100% + var(--cardsGap))
+    );
+    background-color: var(--borderColor);
+    transition: background-color 0.3s ease-in-out;
+}
 .olcards li .icon {
   grid-area: icon;
   align-self: center;
@@ -640,15 +657,8 @@ input[type=button], input[type=submit], input[type=reset] {
     .navbar{
         margin-left: 30px;
         padding: 10px;
-        float: left;
+        display:grid;
+        justify-content: left;
     }
-  	
-  	.navbar button{
-      	font-size: 12px;
-  	}
 
-    /* #fp{
-        margin-left: 25px;
-        float: right;
-    } */
 }
