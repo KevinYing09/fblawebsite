@@ -668,7 +668,7 @@ input[type=button], input[type=submit], input[type=reset] {
     }
 }
 .blur{
-    width: 125%;
+    width: 100%;
     height: 0px;
 
     position: sticky;
@@ -677,11 +677,183 @@ input[type=button], input[type=submit], input[type=reset] {
     top: 88%;
 }
 .blurBar{
-    --blur_pos: 100%;
-
     width: 100%;
     height: 100px;
 
     /* background-color: blue; */
     background-image: linear-gradient(to top, #14213d 10%, transparent);
+}
+
+/* Seating Chart */
+.seating{
+    width: 100%;
+    height: 850px;
+    background-color: red;
+
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center; /* Horizontal */ 
+    align-items: center; /* Vertical */ 
+}
+.seating #seatingbg{
+    width: 95%;
+    height: 800px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: blue;
+}
+.seating .chart1{
+    z-index: 1;
+
+    width: 52.5%;
+    height: 50%;
+
+    position: absolute;
+    top: 95px;
+    left: 95px;
+
+    background-image: url("images/lepookie.jpg");
+    background-size: 100%;
+    object-fit: cover;
+    opacity: 70%;
+
+    box-shadow: 0px 0px 16px black;
+}
+/* Hover 1 -> 1 */
+.seating .chart1:hover{
+    animation: image-1-change 200ms ease-in forwards;
+    animation-play-state: running;
+}
+.seating .chart1:not(hover){
+    animation: reverse-image-1-change 200ms ease-in forwards;
+    animation-play-state: running;
+}
+/* Hover 1 -> 2 */
+.seating .chart1:hover + .chart2{
+    animation: image-2-opacity 200ms ease-in forwards;
+    animation-play-state: running;
+}
+.seating .chart1:not(:hover) + .chart2{
+    animation: reverse-image-2-opacity 200ms ease-in forwards;
+    animation-play-state: running;
+}
+/* img 1 */
+@keyframes image-1-change{
+    from {
+        opacity:70%;
+    }
+    /* 50%{
+        opacity: 85%;
+        z-index: 3;
+    } */
+    to {
+        box-shadow: -7.5px -7.5px 16px black;
+        opacity:100%;
+        z-index: 3;
+        transform: translate(7.5px, 7.5px);
+    }
+}
+@keyframes reverse-image-1-change{
+    from {
+        opacity:100%;
+        z-index: 3;
+        transform: translate(10px, 10px)
+
+    }
+    /* 50%{
+        opacity: 85%;
+        z-index: 1;
+    } */
+    to {
+        opacity:70%;
+        z-index: 1;
+        transform: translate(-10px, -10px);
+    }
+}
+/* img 2 */
+@keyframes image-2-opacity{
+    from {
+        opacity:100%;
+    box-shadow: 7.5px 7.5px 16px black;
+    }
+    to {
+        opacity:70%;
+        transform: translate(-7.5px, -7.5px);
+        box-shadow: 0px 0px 16px black;
+    }
+}
+@keyframes reverse-image-2-opacity{
+    from{
+        opacity:70%;
+        transform: translate(-7.5px, -7.5px);
+    }
+    to{
+        opacity:100%;
+        transform: translate(7.5px, 7.5px);
+    }
+}
+
+/* .seating .chart1:hover{
+    z-index: 3;
+    transform: scale(1.1, 1.1) translate(25px, 25px);
+
+    object-fit: cover;
+
+    opacity: 100%;
+} */
+.seating .chart2{
+    z-index: 2;
+
+    width: 52.5%;
+    height: 50%;
+
+    position: absolute;
+    bottom: 95px;
+    right: 95px;
+
+    background-color: gray;
+    background-image: url("images/hali.jpg");
+    background-size: 100%;
+    object-fit: cover;
+
+    box-shadow: 7.5px 7.5px 16px black;
+}
+.seating .chart1 #tbar{
+    width: 100%;
+    height: 15%;
+    border-style: solid;
+    border-top-width: thin;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+
+    background-color: transparent;
+    border-color: gray;
+
+    text-align: center;
+    font-size: 32px;
+}
+.seating .chart2 #tbar{
+    width: 100%;
+    height: 15%;
+    border-style: solid;
+    border-top-width: thin;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+
+    background-color: transparent;
+    border-color: #f5f5f5;
 }
