@@ -27,20 +27,16 @@
             <div class="blurBar" id="blurBar"></div>
         </div>
         <main>
-            <div class="chart">
-                <div class="fp">
-                    <h2 id="fpTitle">Seating Chart</h2>
-                    <img src="images/floorplan.png" alt="Seating Chart" id="fp-image" usemap="#image-map">
-                        <map name="image-map">
-                            <area id="open1" alt="openSeating" coords="145,37,323,187,778,186,957,137" shape="poly" onmouseover="openChart()">
-                            <area id="open2" alt="openSeating2" coords="147,475,323,418,778,427,952,476" shape="poly" onmouseover="openChart()">
-                            <area id="open3" alt="openSeating3" coords="781,191,961,142,957,472,781,423" shape="poly" onmouseover="openChart()">
-                            <area id="student" alt="studentSection" coords="143,139,321,191,311,424,149,477" shape="poly" onmouseover="openStud()">
-                            <area id="court" alt="Court" coords="323,187,778,186,781,423,311,424" shape="poly" onmouseover="court()">
-                        </map>
-                    <p id="fpText">*Hover Over Chart</p>
+            <div class="seating">
+                <div id="seatingbg"></div>
+                <div class="chart1">
+                    <div id="tbar">
+                        <p>Seating Chart</p>
+                    </div>
                 </div>
-                <div id="icon1"></div>
+                <div class="chart2">
+                    <div id="tbar"></div>
+                </div>
             </div>
             <h2>Policies</h2>
             <ol class="olcards">
@@ -104,28 +100,6 @@
             <p class="f" id="f1">bkanderson@graniteschools.org</p>
             <br>
         </footer>
-        <script>
-            function openChart(){
-            openText = document.getElementById("fpText");
-            document.getElementById("icon1").style.backgroundColor = "#dfbb85";
-
-            txt = "Seating: No Reservation";
-            openText.innerHTML = txt;
-            }
-            function openStud(){
-            openText = document.getElementById("fpText");
-            document.getElementById("icon1").style.backgroundColor = "#14213d";
-            txt = "Seating: Student Reserved";
-
-            openText.innerHTML = txt;
-            }
-            function court(){
-            openText = document.getElementById("fpText");
-            document.getElementById("icon1").style.backgroundColor = "#fca311";
-            txt = "Basketball Court";
-
-            openText.innerHTML = txt;
-            }
-        </script>
+        <script src="script.js"></script>
     </body>
 </html>
