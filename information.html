@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Skyline High School Gymnasium</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
         <header>
@@ -28,66 +31,74 @@
         </div>
         <main>
             <div class="seating">
-                <div id="seatingbgimg">
-                    <div id="seatingstuff"></div>
+                <div id="seatingbg"></div>
+                <div class="chart1">
+                    <div id="tbar">
+                        <p>Seating Chart</p>
+                    </div>
                 </div>
-                <div class="chart1"></div>
-                <div class="chart2"></div>
+                <div class="chart2">
+                    <div id="tbar"></div>
+                </div>
             </div>
-            <h2>Policies</h2>
-            <ol class="olcards">
-                <li style="--cardColor:#14213d;--cardChange:#14213dee;--borderColor:#fca311;">
-                    <div class="content">
-                    <div class="title">Clean up all trash</div>
-                    <div class="text">Please keep the cleanliness of our building in mind when attending events. This saves our faculty lots of time and allows us to keep hosting public events.</div>
-                    </div>
-                </li>
-                <li style="--cardColor:#fca311;--cardChange:#fca311ee;--borderColor:#14213d;">
-                    <div class="content">
-                    <div class="title">No smoking</div>
-                    <div class="text">Skyline enforces a strict no smoking policy in order to protect the health of our faculty, students, and guests. Violators will be removed from the property.</div>
-                    </div>
-                </li>
-                <li style="--cardColor:#14213d;--cardChange:#14213dee;--borderColor:#fca311;">
-                    <div class="content">
-                        <div class="title">Be respectful</div>
-                        <div class="text">All guests must be respectful to performers, falculty, and other guests in order to uphold the reputation of Skyline and its students.</div>
-                    </div>
-                </li>
-                <li style="--cardColor:#fca311;--cardChange:#fca311ee;--borderColor:#14213d;">
-                    <div class="content">
-                        <div class="title">No throwing objects</div>
-                        <div class="text">In order to protect the safety of performers, faculty, and guests please refrain from throwing objects. Violators will be removed from the property.</div>
-                    </div>
-                </li>
-	        </ol>
-            <h2>Amenities</h2>
-             <ol class="olcards">
-                <li style="--cardColor:#14213d;--cardChange:#14213dee;--borderColor:#fca311;">
-                    <div class="content">
-                        <div class="title">Concessions</div>
-                        <div class="text">Concessions are available for purchase at the concession stand located to the right of the entrance. Outside food and drink is not allowed.</div>
-                    </div>
-                </li>
-                <li style="--cardColor:#fca311;--cardChange:#fca311ee;--borderColor:#14213d;">
-                    <div class="content">
-                        <div class="title">Restrooms</div>
-                        <div class="text">Restrooms are located on the left side of the entrance. Please keep them clean and report any issues to a faculty member.</div>
-                    </div>
-                </li>
-                <li style="--cardColor:#14213d;--cardChange:#14213dee;--borderColor:#fca311;">
-                    <div class="content">
-                        <div class="title">First Aid</div>
-                        <div class="text">First aid kits are provided in case of an emergency. Please contact a faculty member if you are in need of aid or other assistance.</div>
-                    </div>
-                </li>
-                <li style="--cardColor:#fca311;--cardChange:#fca311ee;--borderColor:#14213d;">
-                    <div class="content">
-                        <div class="title">Lost and Found</div>
-                        <div class="text">A lost and found is located in the coach's office on the north end of the lower floor. Ask a faculty member to accompany you as the doors may be locked.</div>
-                    </div>
-                </li>
-	        </ol>
+            <div class="grid-container">
+                <div class="grid-child-blue">
+                    <h2 class="p-title">Policies</h2>
+                    <ul class = "p-a">
+                        <li>
+                        <i class="fa-solid fa-trash" style="color: #fca311"></i>
+                        <h3 class="p-title">Clean up all trash</h3>
+                        <p class="p-title">Please keep the cleanliness of our building in mind when attending events. This saves our faculty lots of time and allows us to keep hosting public events.<p>
+                        </li>
+                        
+                        <li>
+                        <i class="fa-solid fa-ban-smoking" style="color: #fca311"></i>
+                        <h3 class="p-title">No smoking</h3>
+                        <p class="p-title">Skyline enforces a strict no smoking policy in order to protect the health of our faculty, students, and guests. Violators will be removed from the property.</p>
+                        </li>
+                    
+                        <li>
+                        <i class="fa-solid fa-user" style="color: #fca311"></i>
+                        <h3 class="p-title">Be respectful</h3>
+                        <p class="p-title">All guests must be respectful to performers, falculty, and other guests in order to uphold the reputation of Skyline and its students.</p>
+                        </li>
+                    
+                        <li>
+                        <i class="fa-solid fa-baseball" style="color: #fca311"></i>
+                        <h3 class="p-title">No throwing objects</h3>
+                        <p class="p-title">In order to protect the safety of performers, faculty, and guests please refrain from throwing objects. Violators will be removed from the property.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid-child-gold">
+                    <h2>Amenities</h2>
+                    <ul class = "p-a">
+                        <li>
+                        <i class="fa-solid fa-utensils"></i>
+                        <h3>Concessions</h3>
+                        <p>Concessions are available for purchase at the concession stand located to the right of the entrance. Outside food and drink are prohibited.<p>
+                        </li>
+                        
+                        <li>
+                        <i class="fa-solid fa-restroom"></i>
+                        <h3>Restrooms</h3>
+                        <p>Restrooms are located on the left side of the entrance. Please keep them clean and report any issues to a faculty member.</p>
+                        </li>
+                    
+                        <li>
+                        <i class="fa-solid fa-briefcase-medical"></i>
+                        <h3>First Aid</h3>
+                        <p>First aid kits are provided in case of an emergency. Please contact a faculty member if you are in need of aid or other assistance.</p>
+                        </li>
+                    
+                        <li>
+                        <i class="fa-solid fa-box-open"></i>
+                        <h3>Lost and Found</h3>
+                        <p>A lost and found is located in the coach's office on the north end of the lower floor. Ask a faculty member to accompany you as the doors may be locked.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </main>
         <footer>
             <br>
