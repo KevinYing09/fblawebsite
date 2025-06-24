@@ -13,6 +13,7 @@ header{
     padding: 0;
     background-color: #14213d;
     height: 100px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 1));
 }
 #logo{
     margin-left: 20px;
@@ -78,6 +79,7 @@ main{
     font-size: 50px;
     background-color: #14213d;
     padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
 .container-cal{
@@ -509,17 +511,9 @@ color: #fca311;
     background-color: #14213d;
     padding: 30px;
     margin: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
-.chart{
-    display: grid;
-    justify-content: center;
-    overflow: visible;
-    width: auto;
-    height: 680px;
-    background-image: url("images/fries.png");
-    background-size: cover;
-    background-attachment: fixed;
-}
+
 #fpTitle{
     left: 325px;
     font-size: 60px;
@@ -627,8 +621,6 @@ color: #fca311;
 #seatingbgimg{
   width: 100%;
   height: 100%;
-  /* background: /* cat image */
-    /* url('images/hali.jpg') 50%/ cover; 4 */
   background-color: #fca311;
 }
 #seatingstuff{
@@ -701,7 +693,7 @@ color: #fca311;
     top: 95px;
     left: 95px;
 
-    background-image: url("images/lepookie.jpg");
+    background-image: url("images/floorplan.png");
     background-size: 100% 100%;
 
     opacity: 70%;
@@ -718,7 +710,7 @@ color: #fca311;
     bottom: 95px;
     right: 95px;
 
-    background-image: url("images/hali.jpg");
+    background-image: url("images/Concession Stand.png");
     background-size: cover;
 
     box-shadow: 7.5px 7.5px 16px black;
