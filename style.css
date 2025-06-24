@@ -439,120 +439,49 @@ input[type=button], input[type=submit], input[type=reset] {
     margin: 4px 2px;
     cursor: pointer;
   }
-  .olcards,
-.olcards * {
-  margin: 0;
-  padding: 0;
-  width: 1200px;
-  height: 100%;
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+.grid-child-blue {
+    background-color: #14213d;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    margin-right: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+.grid-child-gold {
+    background-color: #fca311;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    margin-left: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+.p-title{
+color: #fca311;
+}
+.p-a {
+  list-style-type: none;
+  width: 90%;
+}
+ 
+.p-a li i {
+  float: left;
+  margin: 0 15px 0 0;
+  font-size: 50px;
+}
+ 
+.p-a li {
+  padding: 10px;
+  overflow: auto;
 }
 
-.olcards {
-  list-style: none;
-  counter-reset: cardCount;
-  font-family: sans-serif;
-  display: flex;
-  flex-direction: column;
-  --cardsGap: 1rem;
-  gap: var(--cardsGap);
-  padding-bottom: var(--cardsGap);
-}
-.olcards li {
-  counter-increment: cardCount;
-  display: flex;
-  color: white;
-  --labelOffset: 1rem;
-  --arrowClipSize: 1.5rem;
-  margin-top: var(--labelOffset);
-}
-
-.olcards li::before {
-  content: counter(cardCount, decimal-leading-zero);
-  background: white;
-  color: var(--cardColor);
-  font-size: 2em;
-  font-weight: 700;
-  transform: translateY(calc(-1 * var(--labelOffset)));
-  margin-right: calc(-1 * var(--labelOffset));
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-inline: 0.5em;
-}
-
-.olcards li .content {
-  background: linear-gradient(to right, var(--cardColor), var(--cardChange) 75%, transparent 150%);
-  --inlinePadding: 1em;
-  --boxPadding: 0.5em;
-  display: grid;
-  padding: var(--boxPadding) calc(var(--inlinePadding) + var(--arrowClipSize))
-    var(--boxPadding) calc(var(--inlinePadding) + var(--labelOffset));
-  grid-template-areas:
-    "icon title"
-    "icon text";
-  gap: 0.25em 1em;
-  clip-path: polygon(
-    0 0,
-    calc(100% - var(--arrowClipSize)) 0,
-    100% 50%,
-    calc(100% - var(--arrowClipSize)) 100%,
-    calc(100% - var(--arrowClipSize)) calc(100% + var(--cardsGap)),
-    0 calc(100% + var(--cardsGap))
-  );
-  position: relative;
-}
-.olcards li .content::before {
-  content: "";
-  position: absolute;
-  width: var(--labelOffset);
-  height: var(--labelOffset);
-  background: var(--cardColor);
-  left: 0;
-  bottom: 0;
-  clip-path: polygon(0 0, 100% 0, 0 100%);
-  filter: brightness(0.75);
-}
-.olcards li .content::after {
-  content: "";
-  position: absolute;
-  height: var(--cardsGap);
-  width: var(--cardsGap);
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.25), transparent 50%);
-  left: 0;
-  top: 100%;
-}
-.olcards li:hover {
-    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
-    transition: filter 0.3s ease-in-out;
-}
-.olcards li .content:hover {
-    clip-path: polygon(
-    0 0,
-    calc(100% - var(--arrowClipSize)) 0,
-    100% 50%,
-    calc(100% - var(--arrowClipSize)) 100%,
-    calc(100% - var(--arrowClipSize)) calc(100% + var(--cardsGap)),
-    0 calc(100% + var(--cardsGap))
-    );
-    background-color: var(--borderColor);
-    transition: background-color 0.3s ease-in-out;
-}
-.olcards li .icon {
-  grid-area: icon;
-  align-self: center;
-  font-size: 2em;
-}
-.olcards li .content .title {
-  grid-area: title;
-  font-size: 1.25em;
-  /* font-weight: 700; */
-}
-.olcards li .content .text {
-  grid-area: text;
-  color: var(--textColor);
-  color: white;
-}
 .ball{
     width: 100%;
     height: 400px;
@@ -688,6 +617,7 @@ input[type=button], input[type=submit], input[type=reset] {
 .seating{
     width: 100%;
     height: 850px;
+    background-color: red;
 
     position: relative;
     display: flex;
@@ -695,72 +625,15 @@ input[type=button], input[type=submit], input[type=reset] {
     justify-content: center; /* Horizontal */ 
     align-items: center; /* Vertical */ 
 }
-#seatingbgimg{
-  width: 100%;
-  height: 100%;
-  /* background: /* cat image */
-    /* url('images/hali.jpg') 50%/ cover; 4 */
-  background-color: #fca311;
-}
-#seatingstuff{
-    width: 100%;
-    height: 100%;
-    background: /* blinds */
-      /* pattern
-       * top to bottom 50% lightness grey to white 
-       * repeating gradient (16 repetitions) */
-      /* slightly lighter than 50% grey to fix Chrome on Android glitch */
-      repeating-linear-gradient(45deg, hsl(0, 0%, 52.5%), #fff 6.25%), 
-      /* map
-       * 50% lightness grey to white gradient 
-       * the top third of the gradient is fully grey 
-       * the middle third is the gradient transition 
-       * from the 50% lightness grey of the first third 
-       * to white, which also covers the bottom third */
-      /* extra black stop added to fix Chrome on Android glitch */
-      linear-gradient(45deg, #000 33.3%, grey 0, #fff 66.7%)
-        /* background height is 3x the element's height */
-        0/ 100% 650%; /* 6 */
-    /* for reference: this talk where I go into
-     * the multiply blend mode (Chromium only slides) */
-    background-blend-mode: multiply;
-    /* use a very high contrast value to make  
-     * all greys darker than the 50% lightness one black
-     * and all others white 
-     * from top to bottom, this gives us 
-     * horizontal white bands of increasing height 
-     * with black in between */
-    filter: contrast(999); /* 8 */
-    /* also detailed in the talk mentioned above
-     * wherever this pseudo is white, result of blending 
-     * with parent (with cat background) is white; 
-     * wherever this pseudo is black, result of blending 
-     * with parent is the parent (cat background here) */
-    mix-blend-mode: screen; /* 9 */
-    /* background-position animation goes back and forth */
-    animation: p 4s linear infinite alternate; /* 10 */
-    content: ''; /* 11 necesarry for pseudo to show up */
-    background-color: #f5f5f5;
-  }
+.seating #seatingbg{
+    width: 95%;
+    height: 800px;
 
-    /* width: 100%;
-    height: 100%;
-    background: 
-        var(--pattern, radial-gradient(closest-side, #777, #fff) 0/ 1em 1em space),
-        var(--map, linear-gradient(90deg, #8c8c8c, #fff));
-        background-blend-mode: multiply;
-        filter: contrast(69); */
-@keyframes p {
-  /* cat is covered by grey top third of tall gradient, 
-   * which results in a fully black pseudo after 
-   * blending backgrounds & applying contrast 
-   * => result after blending it with the cat is the cat*/
-  0%, 25% { background-position: 0 0 } /* 12 */
-  /* cat is covered by white bottom third of tall gradient, 
-   * which results in a fully white pseudo after 
-   * blending backgrounds & applying contrast 
-   * => fully white result after blending with cat */
-  75%, 100% { background-position: 0 100% } /* 13 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: blue;
 }
 .seating .chart1{
     z-index: 1;
@@ -773,28 +646,13 @@ input[type=button], input[type=submit], input[type=reset] {
     left: 95px;
 
     background-image: url("images/lepookie.jpg");
-    background-size: 100% 100%;
-
+    background-size: 100%;
+    object-fit: cover;
     opacity: 70%;
+
     box-shadow: 0px 0px 16px black;
 }
-
-.seating .chart2{
-    z-index: 2;
-
-    width: 52.5%;
-    height: 50%;
-
-    position: absolute;
-    bottom: 95px;
-    right: 95px;
-
-    background-image: url("images/hali.jpg");
-    background-size: cover;
-
-    box-shadow: 7.5px 7.5px 16px black;
-}
-
+/* Hover 1 -> 1 */
 .seating .chart1:hover{
     animation: image-1-change 200ms ease-in forwards;
     animation-play-state: running;
@@ -832,7 +690,7 @@ input[type=button], input[type=submit], input[type=reset] {
     from {
         opacity:100%;
         z-index: 3;
-        transform: translate(7.5px, 7.5px)
+        transform: translate(10px, 10px)
 
     }
     /* 50%{
@@ -842,7 +700,7 @@ input[type=button], input[type=submit], input[type=reset] {
     to {
         opacity:70%;
         z-index: 1;
-        transform: translate(-7.5px, -7.5px);
+        transform: translate(-10px, -10px);
     }
 }
 /* img 2 */
@@ -866,4 +724,65 @@ input[type=button], input[type=submit], input[type=reset] {
         opacity:100%;
         transform: translate(7.5px, 7.5px);
     }
+}
+
+/* .seating .chart1:hover{
+    z-index: 3;
+    transform: scale(1.1, 1.1) translate(25px, 25px);
+
+    object-fit: cover;
+
+    opacity: 100%;
+} */
+.seating .chart2{
+    z-index: 2;
+
+    width: 52.5%;
+    height: 50%;
+
+    position: absolute;
+    bottom: 95px;
+    right: 95px;
+
+    background-color: gray;
+    background-image: url("images/hali.jpg");
+    background-size: 100%;
+    object-fit: cover;
+
+    box-shadow: 7.5px 7.5px 16px black;
+}
+.seating .chart1 #tbar{
+    width: 100%;
+    height: 15%;
+    border-style: solid;
+    border-top-width: thin;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+
+    background-color: transparent;
+    border-color: gray;
+
+    text-align: center;
+    font-size: 32px;
+}
+.seating .chart2 #tbar{
+    width: 100%;
+    height: 15%;
+    border-style: solid;
+    border-top-width: thin;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+
+    background-color: transparent;
+    border-color: #f5f5f5;
 }
